@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
         List<String> arrayNumbers = Arrays.stream(txt.split("[+\\-x/]"))
                 .map(num -> num.isEmpty() ? "0" : num)
                 .collect(Collectors.toList());
-        List<String> arrayOperators = new ArrayList<>(Arrays.asList(txt.split("\\d+(.\\d+)?")));
+        List<String> arrayOperators = new ArrayList<>(Arrays.asList(txt.split("\\d+(\\.\\d+)?")));
         arrayOperators.removeIf(String::isEmpty);
 
         Double num1, num2;
